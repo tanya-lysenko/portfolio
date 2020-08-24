@@ -1,0 +1,11 @@
+#personal-qualities {
+  margin-bottom: 16px;
+
+  h2 {
+    @include heading-2;
+  }
+
+  p {
+    @include paragraph;
+  }
+}

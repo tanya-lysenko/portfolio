@@ -1,0 +1,47 @@
+#skills {
+  padding-left: 32px;
+  margin-bottom: 16px;
+
+  @media (max-width: 1151px) {
+    padding-left: 0;
+  }
+
+  h2 {
+    @include heading-2;
+  }
+
+  ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    @media (max-width: 1151px) {
+      flex-flow: row wrap;
+      padding-left: 0;
+    }
+
+    li {
+      @include heading-3;
+
+      display: list-item;
+      margin: 0 8px 40px 18px;
+      list-style-type: disc;
+      list-style-position: inside;
+
+      @media (max-width: 1151px) {
+        width: 354px;
+        margin-bottom: 32px;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 24px;
+      }
+
+      @media print {
+        @include paragraph;
+        display: list-item;
+      }
+    }
+  }
+}
