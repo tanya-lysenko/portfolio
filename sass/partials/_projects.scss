@@ -35,6 +35,7 @@
 
     li {
       @include card;
+      margin-bottom: 24px;
 
       h3 {
         @include heading-3;

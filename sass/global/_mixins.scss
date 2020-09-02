@@ -5,6 +5,7 @@
   font-size: 32px;
   font-weight: $font-weight-regular;
   line-height: 48px;
+  letter-spacing: -.8px;
   color: $color-primary;
   border-bottom: 3px solid $color-secondary-light;
 }
@@ -31,7 +32,6 @@
 @mixin card {
   display: block;
   padding: 0 8px 8px;
-  margin-bottom: 24px;
   flex-basis: 384px;
 
   @media (max-width: 767px) {

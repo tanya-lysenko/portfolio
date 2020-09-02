@@ -272,7 +272,7 @@ main {
           margin: auto 0 auto 16px; }
     #header .right .photo {
       display: block;
-      height: 200px;
+      height: 228px;
       width: 176px;
       margin: 16px 8px;
       order: 2; }
@@ -299,6 +299,7 @@ main {
     font-size: 32px;
     font-weight: 700;
     line-height: 48px;
+    letter-spacing: -.8px;
     color: #DC143C;
     border-bottom: 3px solid #999; }
   #experience .step {
@@ -342,6 +343,7 @@ main {
     font-size: 32px;
     font-weight: 700;
     line-height: 48px;
+    letter-spacing: -.8px;
     color: #DC143C;
     border-bottom: 3px solid #999; }
   #languages p {
@@ -363,6 +365,7 @@ main {
     font-size: 32px;
     font-weight: 700;
     line-height: 48px;
+    letter-spacing: -.8px;
     color: #DC143C;
     border-bottom: 3px solid #999; }
   #personal-qualities p {
@@ -387,6 +390,7 @@ main {
     font-size: 32px;
     font-weight: 700;
     line-height: 48px;
+    letter-spacing: -.8px;
     color: #DC143C;
     border-bottom: 3px solid #999; }
     #projects h2 span {
@@ -408,8 +412,8 @@ main {
     #projects ul li {
       display: block;
       padding: 0 8px 8px;
-      margin-bottom: 24px;
-      flex-basis: 384px; }
+      flex-basis: 384px;
+      margin-bottom: 24px; }
       @media (max-width: 767px) {
         #projects ul li {
           flex-basis: auto; } }
@@ -453,13 +457,15 @@ main {
     font-size: 32px;
     font-weight: 700;
     line-height: 48px;
+    letter-spacing: -.8px;
     color: #DC143C;
     border-bottom: 3px solid #999; }
   #education ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: stretch; }
+    align-items: flex-start;
+    margin-bottom: 24px; }
     @media (max-width: 767px) {
       #education ul {
         flex-flow: column nowrap;
@@ -467,7 +473,6 @@ main {
     #education ul li {
       display: block;
       padding: 0 8px 8px;
-      margin-bottom: 24px;
       flex-basis: 384px; }
       @media (max-width: 767px) {
         #education ul li {
@@ -481,12 +486,15 @@ main {
         #education ul li a .img-box {
           display: block;
           overflow: hidden;
-          max-height: 520px;
           max-width: 368px; }
+          #education ul li a .img-box.box-v {
+            max-height: 520px; }
+          #education ul li a .img-box.box-h {
+            max-height: 252px; }
           #education ul li a .img-box img {
             display: block;
-            height: 100%;
-            width: 100%; }
+            width: 100%;
+            height: 100%; }
 
 #skills {
   padding-left: 32px;
@@ -501,6 +509,7 @@ main {
     font-size: 32px;
     font-weight: 700;
     line-height: 48px;
+    letter-spacing: -.8px;
     color: #DC143C;
     border-bottom: 3px solid #999; }
   #skills ul {
