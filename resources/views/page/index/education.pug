@@ -1,0 +1,30 @@
+if education.length
+    section(id="education", data-gallery=JSON.stringify(education), x-data="galleryData()", x-init="galleryInit()")
+        h2
+            | Education
+        ul(data-preload)
+            each cert in education
+                li
+                    div(class="img-box")
+                        img(src=cert.src, alt=cert.alt)
+
+        template(x-if="certs.length")
+            ul
+                template(x-for="(cert, i) in certs", :key="i")
+                    li
+                        div(class="img-box", @click="openModal(cert)")
+                            img(:src="cert.src", :alt="cert.alt")
+
+        div(class="shadow", @resize.window="fixModal()", x-show="show",
+            x-transition:enter="open-delay", x-transition:enter-start="closed", x-transition:enter-end="opened",
+            x-transition:leave="close-delay", x-transition:leave-start="opened", x-transition:leave-end="closed",
+            x-cloak)
+            div(class="modal-wrap", x-show="show",
+                x-transition:enter-start="closed", x-transition:enter-end="opened",
+                x-transition:leave-start="opened", x-transition:leave-end="closed",
+                x-cloak)
+                div(class="modal", x-ref="modal")
+                    div(class="close")
+                        span
+                            | &times;
+                    img(:src="src", alt="", @click.away="show = false")

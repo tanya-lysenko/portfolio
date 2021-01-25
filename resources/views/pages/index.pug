@@ -1,0 +1,129 @@
+extends ../layouts/app
+
+block data
+    -
+        header = {
+            name: {
+                first: 'Tatiana',
+                last: 'Lysenko',
+            },
+            profession: 'Markup developer',
+            address: 'Kharkiv, Ukraine',
+            email: 'tatiana.viktorovna.lysenko@gmail.com',
+            phone: {
+                tel: '+380 (99) 379 45 49',
+                tg: 'Tanya_Lysenko',
+            },
+        }
+    -
+        experience = [
+            {
+                date: '06.2019 - 01.2021',
+                title: 'Freelance',
+                text: [
+                    //'Разработка структуры сайта, дизайна страниц, работа в команде над вёрсткой.',
+                ],
+            },
+        ]
+    -
+        qualities = [
+            'analytical thinking',
+            'conscientiousness',
+            'quick learning',
+            'responsibility',
+            'self-organization',
+            'dedication',
+            'perseverance',
+            'teamwork',
+        ]
+    -
+        languages = [
+            {
+                name: 'Russian',
+                value: 'native',
+            },
+            {
+                name: 'Ukrainian',
+                value: 'native',
+            },
+            {
+                name: 'English',
+                value: 'pre-intermediate',
+            },
+        ]
+    - github = 'https://github.com/tanya-lysenko?tab=repositories';
+    -
+        projects = [
+            {
+                name: 'Organic Chest',
+                demo: 'https://alexey-khomenko.github.io/organic/',
+                prod: 'https://organicchest.com.ua',
+                src: './images/project__organic.jpg',
+            },
+            {
+                name: 'Jkaros',
+                demo: 'https://tanya-lysenko.github.io/jkaros/',
+                src: './images/project__jkaros.jpg',
+            },
+            {
+                name: 'Phototime',
+                demo: 'https://tanya-lysenko.github.io/phototime/',
+                src: './images/project__phototime.jpg',
+            },
+            {
+                name: 'Creativia',
+                demo: 'https://tanya-lysenko.github.io/creativia/',
+                src: './images/project__creativia.jpg',
+            },
+            {
+                name: 'Development',
+                demo: 'https://tanya-lysenko.github.io/development/',
+                src: './images/project__organic.jpg',
+            },
+            {
+                name: 'Lemon',
+                demo: 'https://tanya-lysenko.github.io/lemon/',
+                src: './images/project__lemon.jpg',
+            },
+            {
+                name: 'Mostra',
+                demo: 'https://tanya-lysenko.github.io/mostra/',
+                src: './images/project__mostra.jpg',
+            },
+        ]
+    -
+        education = [
+            {
+                src: './images/education__cert-1.jpg',
+                src_b: './images/education__cert-1b.jpg',
+                width: 1668,
+                height: 2368,
+                alt: 'certificate'
+            },
+            {
+                src: './images/education__cert-2.jpg',
+                src_b: './images/education__cert-2b.jpg',
+                width: 1668,
+                height: 1160,
+                alt: 'diploma'
+            },
+        ]
+    -
+        skills = [
+            'HTML',
+            'CSS / SCSS',
+            'Git / GitHub',
+        ]
+
+block header
+    include ../layout/app/header
+
+block main
+    div(id="content")
+        include ../page/index/experience
+        include ../page/index/qualities
+        include ../page/index/languages
+        include ../page/index/projects
+        include ../page/index/education
+    div(id="skills")
+        include ../page/index/skills

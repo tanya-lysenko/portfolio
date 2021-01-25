@@ -1,0 +1,7 @@
+if qualities.length
+    section(id="qualities")
+        h2
+            | Personal qualities
+        p
+            - result = qualities.join(', ');
+            | #{result[0].toUpperCase() + result.slice(1)}.

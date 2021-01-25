@@ -1,0 +1,15 @@
+if experience.length
+    section(id="experience")
+        h2
+            | Work experience
+        each step in experience
+            div(class="step")
+                div(class="left")
+                    p
+                        | #{step.date}
+                div(class="right")
+                    h3
+                        | !{step.title}
+                    each paragraph in step.text
+                        p
+                            | !{paragraph}

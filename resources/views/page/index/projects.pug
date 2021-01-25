@@ -1,0 +1,31 @@
+if projects.length
+    section(id="projects")
+        h2
+            | Examples of work
+            |
+            span
+                | (
+                a(href=github, target="_blank")
+                    | github
+                | )
+        ul(class="img-scalable")
+            each project in projects
+                li
+                    h3
+                        | #{project.name}
+                    div(class="img-box")
+                        img(src=project.src, alt=project.name)
+
+                        if 'prod' in project && 'demo' in project
+                            a(href=project.prod, target="_blank", class="link link-top")
+                                span
+                                    | production
+
+                            a(href=project.demo, target="_blank", class="link link-bottom")
+                                span
+                                    | demo
+                        else
+                            //- if 'demo' in project
+                            a(href=(project.prod || project.demo) target="_blank", class="link link-full")
+                                span
+                                    | #{'prod' in project ? 'production' : 'demo'}

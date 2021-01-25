@@ -1,0 +1,10 @@
+if languages.length
+    section(id="languages")
+        h2
+            | Languages
+        p
+            -
+                result = languages.map(function (lang) {
+                    return lang.name + ' &ndash; ' + lang.value;
+                });
+            | !{result.join(', ')}.

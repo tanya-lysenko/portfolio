@@ -1,0 +1,19 @@
+doctype html
+block data
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="initial-scale=1.0, width=device-width")
+        link(href="js/scripts.js", rel="preload", as="script")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap").
+        link(rel="stylesheet", href="css/styles.css")
+        title
+            | #{header.name.first} #{header.name.last} | Portfolio
+    body
+        div(id="wrapper")
+            div(class="container")
+                header
+                    block header
+                main
+                    block main
+        script(src="js/scripts.js", defer='defer')
